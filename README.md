@@ -13,6 +13,14 @@ Researches about underwater propulsion mainly illustrate the use of propellers o
 
   •	Goal based locomotion and object tracking for underwater exploratory robots using deep reinforcement learning.
   
+ # Workplan:
+  •	Waterproofing of the servos and othe components( Finish before 21/08 by Jack)
+  •	If a solution for waterproofing is not found before 19/08 then we'll have to order waterproof servos
+  •	Gazebo simulation error correction ( By Senthur )
+  •	Validation and callibration of the bot and video shoot by FSOC (Aditya, Manu, Senthur, Jack)
+  •	ICRA paper writing work (Manu)
+  •	ICRA paper submission along with video (Last date September 15)
+  
 # Team:
 
   • Aditya Singh [https://github.com/adityasingh3007]
