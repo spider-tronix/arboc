@@ -1,4 +1,4 @@
-# Arboc
+﻿# Arboc
 # Abstract:
 
 Researches about underwater propulsion mainly illustrate the use of propellers or thrusters to propel a robot in an underwater environment whereas most of the aquatic animals change their body shape in order to navigate.The shape-change generating propulsion force makes them move forward or backward effectively.The underwater snake-like robot is a kind of bionic robot which changes its body shape to navigate in underwater environment.The aim of the project is to understand the dynamics of underwater robots in general and the effect of lift, drag and hydrodynamic coefficients on them and to simulate, validate and develop a snake-like robot which is robust enough to carry out underwater exploratory tasks.
@@ -14,11 +14,7 @@ Researches about underwater propulsion mainly illustrate the use of propellers o
   •	Goal based locomotion and object tracking for underwater exploratory robots using deep reinforcement learning.
   
  # Workplan:
-  •	Waterproofing of the servos and othe components( Finish before 21/08 Jack)
-  
-  •	If a solution for waterproofing is not found before 19/08 then we'll have to order waterproof servos
-  
-  •	Gazebo simulation error correction ( By Senthur )
+  •	Gazebo simulation updation ( By Senthur )
   
   •	Validation and callibration of the bot and video shoot by FSOC (Aditya, Manu, Senthur, Jack)
   
