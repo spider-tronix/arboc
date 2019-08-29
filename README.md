@@ -26,16 +26,10 @@ Researches about underwater propulsion mainly illustrate the use of propellers o
 
   • Aditya Singh [https://github.com/adityasingh3007]
   
-  • Bhavya Krishna [https://github.com/BhavyaKrishna]
-  
-  • DC Vivek [https://github.com/dc28vivek]
-  
   • Jack Samuel S [https://github.com/jaxxstar] 
   
   • Manu Aatitya [https://github.com/manuaatitya]  
   
   • Senthur Raj [https://github.com/imsenthur]
-  
-  • Vibashan VS [https://github.com/Vibashan]
   
   
