@@ -21,6 +21,15 @@ Researches about underwater propulsion mainly illustrate the use of propellers o
   •	ICRA paper writing work (Manu)
   
   •	ICRA paper submission along with video (Last date September 15)
+
+  •	IROS paper submission along with video 
+
+# Paper Submission:
+  •	ICRA 
+
+  •	IROS
+
+  •	Underwater Robotics Conference
   
 # Team:
 
