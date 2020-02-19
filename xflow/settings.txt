@@ -1,0 +1,42 @@
+Project Tree:
+
+Create geometry:
+__Direction: x:0.0 y:0.0 z:1.0
+__Num radial segments: 20
+__Num longit. segments: 16
+
+Environment:
+__Engine:
+____Kernel: 2d
+
+__Environment:
+____Wind tunnel*: Dimensions: ()m
+____Boundary conditions: Velocity: X: ()m.s-1
+
+Materials:
+(For a cylinder of diameter* 0.4m)
+
+__Materials: Material 1
+____Reference density*: 1kg.m-3
+____Dynamic viscosity*: 0.001Pa.s
+____Reynolds number*: 4000
+____Velocity of fluid: 10m.s-1
+
+Simulation:
+__Time:
+____Simulation time: 2s
+__Resolution:
+____Resolved scale: 0.04m
+
+------------------------------------
+------------- R U N ----------------
+------------------------------------
+
+Post processing:
+
+Refinement method:
+__Adaptive refinement:
+____Target resolved resolution*: 0.02m
+____Wake resolution*: 0.02m
+
+*Subjected to change
