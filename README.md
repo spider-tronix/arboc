@@ -13,19 +13,9 @@ Researches about underwater propulsion mainly illustrate the use of propellers o
 
   •	Goal based locomotion and object tracking for underwater exploratory robots using deep reinforcement learning.
   
- # Workplan:
-  •	Waterproofing
-
-  •	Gazebo simulation updation ( By Senthur )
-  
-  •	Validation and callibration of the bot and video shoot by FSOC (Aditya, Manu, Senthur, Jack)
-
-  •	IROS paper submission along with video 
 
 # Paper Submission:
-  •	IROS
-
-  •	Underwater Robotics Conference
+  •	ICCAR
   
 # Team:
 
