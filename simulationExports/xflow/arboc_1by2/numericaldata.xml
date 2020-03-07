@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<SimulationData>
+    <Entities>
+        <Entity name="Global vars">
+            <Component name="Time" id="1"/>
+            <Component name="Stability parameter" id="2"/>
+        </Entity>
+        <Entity name="Cylinder" type="Geometry-Wall">
+            <Component name="Cx" id="3"/>
+            <Component name="Cy" id="4"/>
+            <Component name="Cz" id="5"/>
+            <Component name="Fx" id="6"/>
+            <Component name="Fy" id="7"/>
+            <Component name="Fz" id="8"/>
+            <Component name="Mx" id="9"/>
+            <Component name="My" id="10"/>
+            <Component name="Mz" id="11"/>
+        </Entity>
+        <Entity name="Overall forces">
+            <Component name="Cx" id="12"/>
+            <Component name="Cy" id="13"/>
+            <Component name="Cz" id="14"/>
+            <Component name="Fx" id="15"/>
+            <Component name="Fy" id="16"/>
+            <Component name="Fz" id="17"/>
+            <Component name="Mx" id="18"/>
+            <Component name="My" id="19"/>
+            <Component name="Mz" id="20"/>
+        </Entity>
+        <Entity name="Mass integrals">
+            <Component name="Inlet mass flux" id="21"/>
+            <Component name="Outlet mass flux" id="22"/>
+            <Component name="Overall mass" id="23"/>
+        </Entity>
+        <Entity name="Momentum integrals">
+            <Component name="Inlet X-momentum flux" id="24"/>
+            <Component name="Inlet Y-momentum flux" id="25"/>
+            <Component name="Inlet Z-momentum flux" id="26"/>
+            <Component name="Outlet X-momentum flux" id="27"/>
+            <Component name="Outlet Y-momentum flux" id="28"/>
+            <Component name="Outlet Z-momentum flux" id="29"/>
+        </Entity>
+        <Entity name="Pressure integrals">
+            <Component name="Inlet total pressure flux" id="30"/>
+            <Component name="Inlet static pressure flux" id="31"/>
+            <Component name="Inlet dynamic pressure flux" id="32"/>
+            <Component name="Outlet total pressure flux" id="33"/>
+            <Component name="Outlet static pressure flux" id="34"/>
+            <Component name="Outlet dynamic pressure flux" id="35"/>
+        </Entity>
+        <Entity name="Other integrals">
+            <Component name="Inlet enstrophy flux" id="36"/>
+            <Component name="Outlet enstrophy flux" id="37"/>
+            <Component name="Overall enstrophy" id="38"/>
+            <Component name="Overall kinetic energy" id="39"/>
+        </Entity>
+    </Entities>
+    <EntitiesCounter num="39"/>
+</SimulationData>

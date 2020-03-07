@@ -1,0 +1,3 @@
+[ INFO  ] Generating Octree with 1 levels.[ INFO  ] Level 0[ INFO  ] Determining lattice/geometry intersection...[ INFO  ] Determining regions with fluid[ INFO  ] Automatically determining regions with fluid[ INFO  ] External wind tunnel domain:: Identifying just one external region[ INFO  ] 1 discarded regions
+[ INFO  ] 1 identified regions[ INFO  ] Generating node map.[ INFO  ] Num active elements at level  0: 284840 / 288000
+[ INFO  ] Total number of elements: 284840[ INFO  ] Writing domain[ INFO  ] Num boundary elements: 1640[ INFO  ] Overall broken links: 11448[ INFO  ] Domain successfully generated.

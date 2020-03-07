@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XFlow build="1.0.106.05">
+    <Project>
+        <Name>arboc_1by2</Name>
+    </Project>
+    <Engine>
+        <Kernel>3d</Kernel>
+        <FlowModel>SinglePhase</FlowModel>
+        <AnalysisType>External</AnalysisType>
+        <ThermalModel type="Isothermal"/>
+        <TurbulenceSettings>
+            <TurbulenceModel type="Automatic"/>
+            <TurbulenceGeneration type="Off"/>
+        </TurbulenceSettings>
+        <AcousticsAnalysis>Off</AcousticsAnalysis>
+        <ScalarTransport type="Off"/>
+        <AdvancedOptions>
+            <HighOrderBoundaryConditions>Off</HighOrderBoundaryConditions>
+            <ForceEvaluationScheme>Automatic</ForceEvaluationScheme>
+            <StructuralAnalysis type="Disabled"/>
+            <TimeIntegrationScheme>Standard</TimeIntegrationScheme>
+            <WallFunctionTimeFilter type="Off"/>
+            <EnforceIncompressibleModel>Off</EnforceIncompressibleModel>
+            <MovingPartsSurfaceNormalDetection>On</MovingPartsSurfaceNormalDetection>
+            <RefractiveIndex type="Off"/>
+        </AdvancedOptions>
+    </Engine>
+    <Environment>
+        <GlobalAttributes>
+            <DomainType>VirtualWindTunnel</DomainType>
+            <ExtAccelerationLaws>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </ExtAccelerationLaws>
+            <InitialConditions type="WindTunnelDefault"/>
+            <ReferenceArea type="Front"/>
+            <ReferenceVelocity type="Automatic"/>
+        </GlobalAttributes>
+        <WindTunnel>
+            <Position>( 0 , 0 , 0 )</Position>
+            <Dimensions>( 12 , 4 , 6 )</Dimensions>
+            <GroundWall type="Off"/>
+            <LateralBoundaries>Periodic</LateralBoundaries>
+            <BoundaryConditions type="Velocity">
+                <VelocityLaws>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>10</Z>
+                </VelocityLaws>
+            </BoundaryConditions>
+            <H5File></H5File>
+        </WindTunnel>
+    </Environment>
+    <Materials>
+        <Materials>
+            <Material1>
+                <Name>Material 1</Name>
+                <MolecularWeight>28.996</MolecularWeight>
+                <ReferenceDensity>1.225</ReferenceDensity>
+                <OperatingTemperature>288.15</OperatingTemperature>
+                <ViscosityModel type="Newtonian">
+                    <DynamicViscosity>1.7894e-5</DynamicViscosity>
+                </ViscosityModel>
+                <ThermalConductivity>0.0243</ThermalConductivity>
+                <SpecificHeatCapacity>1006.43</SpecificHeatCapacity>
+                <AdiabaticIndex>1.4</AdiabaticIndex>
+                <ReferencePressure>101217</ReferencePressure>
+                <ReferenceDensity>1.225</ReferenceDensity>
+            </Material1>
+        </Materials>
+    </Materials>
+    <Geometry>
+        <Entities>
+            <Shape name="Cylinder" id="0">
+                <VisibilityOnViews>1</VisibilityOnViews>
+                <File>Cylinder.nfb</File>
+                <MaterialDoubleSided>Off</MaterialDoubleSided>
+                <Material type="Rubber">
+                    <Colour>( 255 , 0 , 0 )</Colour>
+                    <TransparencyIndex>1</TransparencyIndex>
+                    <ReflectionIndex>0.5</ReflectionIndex>
+                    <MetallicityCoefficient>0</MetallicityCoefficient>
+                    <Clearcoat>Off</Clearcoat>
+                    <EmissivityCoefficient>0</EmissivityCoefficient>
+                </Material>
+                <MaterialInside type="">
+                    <Colour>( 0 , 0 , 255 )</Colour>
+                    <TransparencyIndex>1</TransparencyIndex>
+                    <ReflectionIndex>0.5</ReflectionIndex>
+                    <MetallicityCoefficient>0</MetallicityCoefficient>
+                    <Clearcoat>Off</Clearcoat>
+                    <EmissivityCoefficient>0</EmissivityCoefficient>
+                </MaterialInside>
+                <ItemDetails type="">
+                    <ItemId></ItemId>
+                    <Cestamp></Cestamp>
+                </ItemDetails>
+                <Behaviour type="Fixed">
+                    <Scale>1</Scale>
+                    <Position>( 0 , 0 , 0 )</Position>
+                    <Orientation>( 0 , 0 , 0 )</Orientation>
+                </Behaviour>
+                <BoundaryConditions type="Wall">
+                    <WallModel>Automatic</WallModel>
+                    <WallRoughness>0</WallRoughness>
+                    <VirtualMovingWall type="Off"/>
+                </BoundaryConditions>
+                <Surfaces/>
+                <Children/>
+            </Shape>
+        </Entities>
+        <ArbitraryReferenceFrame>
+            <ReferenceGeometry>Global</ReferenceGeometry>
+        </ArbitraryReferenceFrame>
+        <MeshDeflection>0.1</MeshDeflection>
+        <Cables/>
+        <Joints/>
+    </Geometry>
+    <Simulation>
+        <Time>
+            <SimulationTime>20</SimulationTime>
+            <TimeStepMode type="FixedAutomatic">
+                <Courant>1</Courant>
+            </TimeStepMode>
+        </Time>
+        <Resolution>
+            <ResolvedScale>0.1</ResolvedScale>
+            <RefinementAlgorithm>Disabled</RefinementAlgorithm>
+        </Resolution>
+        <StoreData>
+            <FramesFrequency>50</FramesFrequency>
+            <NumericalDataFrequency type="SolverTimeStep">
+                <ArbitraryLatticeLevel>0.1</ArbitraryLatticeLevel>
+            </NumericalDataFrequency>
+            <SaveAveragedFields type="Off"/>
+            <SaveResumeFile>Off</SaveResumeFile>
+            <ComputeMarkers>Off</ComputeMarkers>
+            <OutputFormat>
+                <NativeXFlow>On</NativeXFlow>
+                <CGNS>Off</CGNS>
+                <VTK>Off</VTK>
+            </OutputFormat>
+            <FieldsToSave>
+                <Vorticity>On</Vorticity>
+                <StaticPressure>On</StaticPressure>
+                <TotalPressure>On</TotalPressure>
+                <TurbulenceIntensity>On</TurbulenceIntensity>
+                <EffectiveViscosity>On</EffectiveViscosity>
+            </FieldsToSave>
+            <StaticPressureFilters/>
+            <Probes/>
+            <CuttingPlanes/>
+        </StoreData>
+    </Simulation>
+    <Post-Processing>
+        <General>
+            <Data>Instantaneous</Data>
+            <InterpolationMode>Off</InterpolationMode>
+            <Show>
+                <DomainStructure>
+                    <VisibilityOnViews>0</VisibilityOnViews>
+                    <MinLevel>0</MinLevel>
+                    <MaxLevel>20</MaxLevel>
+                    <CellSize>Off</CellSize>
+                </DomainStructure>
+                <VolumetricField>
+                    <VisibilityOnViews>0</VisibilityOnViews>
+                    <VisualisationField>Velocity</VisualisationField>
+                    <TransferenceLaw>a*a</TransferenceLaw>
+                </VolumetricField>
+                <SurfaceInfo type="3dField">
+                    <VisibilityOnViews>0</VisibilityOnViews>
+                    <Field>Velocity</Field>
+                </SurfaceInfo>
+                <Isocontours>
+                    <VisibilityOnViews>0</VisibilityOnViews>
+                    <Number>5</Number>
+                </Isocontours>
+            </Show>
+        </General>
+        <CuttingPlanes/>
+        <Isosurfaces/>
+        <StreamTracers/>
+        <PlotLines/>
+        <Sensors/>
+        <SurfaceIntegrals/>
+        <VolumeIntegrals/>
+        <CustomFields/>
+        <Entities/>
+        <Cameras/>
+        <ClippingPlanes/>
+        <Views>
+            <GraphicView1>
+                <CameraSettings>
+                    <LinkToCamera>GraphicView1</LinkToCamera>
+                    <Location>
+                        <From>( -13751 , 0 , 0 )</From>
+                        <To>( 0 , 0 , 0 )</To>
+                        <Up>( 0 , 1 , 0 )</Up>
+                    </Location>
+                    <ManualClippingPlanes type="Off"/>
+                    <Perspective type="Off"/>
+                </CameraSettings>
+            </GraphicView1>
+        </Views>
+    </Post-Processing>
+</XFlow>

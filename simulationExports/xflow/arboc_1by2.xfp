@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<XFlow build="1.0.106.05">
+ <Project>
+  <Name>arboc_1by2</Name>
+ </Project>
+ <Engine>
+  <Kernel>3d</Kernel>
+  <FlowModel>SinglePhase</FlowModel>
+  <AnalysisType>External</AnalysisType>
+  <ThermalModel type="Isothermal"/>
+  <TurbulenceSettings>
+   <TurbulenceModel type="Automatic"/>
+  </TurbulenceSettings>
+ </Engine>
+ <Environment>
+  <GlobalAttributes>
+   <DomainType>VirtualWindTunnel</DomainType>
+   <ExtAccelerationLaws>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0</Z>
+   </ExtAccelerationLaws>
+   <InitialConditions type="WindTunnelDefault"/>
+   <ReferenceArea type="Front"/>
+   <ReferenceVelocity type="Automatic"/>
+  </GlobalAttributes>
+  <WindTunnel>
+   <Position>( 0 , 0 , 0 )</Position>
+   <Dimensions>( 12 , 4 , 6 )</Dimensions>
+   <GroundWall type="Off"/>
+   <LateralBoundaries>Periodic</LateralBoundaries>
+   <BoundaryConditions type="Velocity">
+    <VelocityLaws>
+     <X>0</X>
+     <Y>0</Y>
+     <Z>10</Z>
+    </VelocityLaws>
+   </BoundaryConditions>
+   <H5File/>
+  </WindTunnel>
+ </Environment>
+ <Materials>
+  <Materials>
+   <Material1>
+    <Name>Material 1</Name>
+    <MolecularWeight>28.996</MolecularWeight>
+    <ReferenceDensity>1.225</ReferenceDensity>
+    <OperatingTemperature>288.15</OperatingTemperature>
+    <ViscosityModel type="Newtonian">
+     <DynamicViscosity>1.7894e-5</DynamicViscosity>
+    </ViscosityModel>
+    <ThermalConductivity>0.0243</ThermalConductivity>
+    <SpecificHeatCapacity>1006.43</SpecificHeatCapacity>
+    <AdiabaticIndex>1.4</AdiabaticIndex>
+    <ReferencePressure>101217</ReferencePressure>
+    <ReferenceDensity>1.225</ReferenceDensity>
+   </Material1>
+  </Materials>
+ </Materials>
+ <Geometry>
+  <Entities>
+   <Shape name="Cylinder" id="0">
+    <VisibilityOnViews>1</VisibilityOnViews>
+    <File>Cylinder.nfb</File>
+    <MaterialDoubleSided>Off</MaterialDoubleSided>
+    <Material type="Rubber">
+     <Colour>( 255 , 0 , 0 )</Colour>
+     <TransparencyIndex>1</TransparencyIndex>
+     <ReflectionIndex>0.5</ReflectionIndex>
+     <MetallicityCoefficient>0</MetallicityCoefficient>
+     <Clearcoat>Off</Clearcoat>
+     <EmissivityCoefficient>0</EmissivityCoefficient>
+    </Material>
+    <MaterialInside type="">
+     <Colour>( 0 , 0 , 255 )</Colour>
+     <TransparencyIndex>1</TransparencyIndex>
+     <ReflectionIndex>0.5</ReflectionIndex>
+     <MetallicityCoefficient>0</MetallicityCoefficient>
+     <Clearcoat>Off</Clearcoat>
+     <EmissivityCoefficient>0</EmissivityCoefficient>
+    </MaterialInside>
+    <ItemDetails type="">
+     <ItemId/>
+     <Cestamp/>
+    </ItemDetails>
+    <Behaviour type="Fixed">
+     <Scale>1</Scale>
+     <Position>( 0 , 0 , 0 )</Position>
+     <Orientation>( 0 , 0 , 0 )</Orientation>
+    </Behaviour>
+    <BoundaryConditions type="Wall">
+     <WallModel>Automatic</WallModel>
+     <WallRoughness>0</WallRoughness>
+    </BoundaryConditions>
+    <Surfaces/>
+    <Children/>
+   </Shape>
+  </Entities>
+  <ArbitraryReferenceFrame>
+   <ReferenceGeometry>Global</ReferenceGeometry>
+  </ArbitraryReferenceFrame>
+  <MeshDeflection>0.1</MeshDeflection>
+  <Cables/>
+  <Joints/>
+ </Geometry>
+ <Simulation>
+  <Time>
+   <SimulationTime>20</SimulationTime>
+   <TimeStepMode type="FixedAutomatic">
+    <Courant>1</Courant>
+   </TimeStepMode>
+  </Time>
+  <Resolution>
+   <ResolvedScale>0.1</ResolvedScale>
+   <RefinementAlgorithm>Disabled</RefinementAlgorithm>
+  </Resolution>
+  <StoreData>
+   <FramesFrequency>50</FramesFrequency>
+   <NumericalDataFrequency type="SolverTimeStep">
+    <ArbitraryLatticeLevel>0.1</ArbitraryLatticeLevel>
+   </NumericalDataFrequency>
+   <SaveAveragedFields type="Off"/>
+   <SaveResumeFile>Off</SaveResumeFile>
+   <ComputeMarkers>Off</ComputeMarkers>
+   <FieldsToSave>
+    <Vorticity>On</Vorticity>
+    <StaticPressure>On</StaticPressure>
+    <TotalPressure>On</TotalPressure>
+    <TurbulenceIntensity>On</TurbulenceIntensity>
+    <EffectiveViscosity>On</EffectiveViscosity>
+   </FieldsToSave>
+   <StaticPressureFilters/>
+   <Probes/>
+   <CuttingPlanes/>
+  </StoreData>
+  <MpiOptions isRemoteCommand="0" mpiIsBeenUsed="1">
+   <WorkingDirectory></WorkingDirectory>
+   <User>jacks</User>
+   <Machines/>
+   <QueueSystem>NONE</QueueSystem>
+   <NumJobs>2</NumJobs>
+   <ThreadsPerJobs>1</ThreadsPerJobs>
+   <MpiImplementation>OpenMPI4</MpiImplementation>
+   <EngineInstallDir>D:/Program Files/SIMULIA/XFlow_2019x</EngineInstallDir>
+   <HeadNodeChecked>0</HeadNodeChecked>
+   <HeadNode></HeadNode>
+   <IsDistributed>1</IsDistributed>
+   <IsRemotePreprocessing>1</IsRemotePreprocessing>
+   <RetrieveSimData></RetrieveSimData>
+   <SMBAccess>0</SMBAccess>
+   <RemoteOS>Unix</RemoteOS>
+   <QueueCommand></QueueCommand>
+   <QueueScript></QueueScript>
+  </MpiOptions>
+ </Simulation>
+ <Post-Processing>
+  <General>
+   <Data>Instantaneous</Data>
+   <InterpolationMode>Off</InterpolationMode>
+   <Show>
+    <DomainStructure>
+     <VisibilityOnViews>0</VisibilityOnViews>
+     <MinLevel>0</MinLevel>
+     <MaxLevel>20</MaxLevel>
+     <CellSize>Off</CellSize>
+    </DomainStructure>
+    <VolumetricField>
+     <VisibilityOnViews>0</VisibilityOnViews>
+     <VisualisationField>Velocity</VisualisationField>
+     <TransferenceLaw>a*a</TransferenceLaw>
+    </VolumetricField>
+    <SurfaceInfo type="3dField">
+     <VisibilityOnViews>0</VisibilityOnViews>
+     <Field>Velocity</Field>
+    </SurfaceInfo>
+    <Isocontours>
+     <VisibilityOnViews>0</VisibilityOnViews>
+     <Number>5</Number>
+    </Isocontours>
+   </Show>
+  </General>
+  <CuttingPlanes/>
+  <Isosurfaces/>
+  <StreamTracers/>
+  <PlotLines/>
+  <Sensors/>
+  <SurfaceIntegrals/>
+  <VolumeIntegrals/>
+  <CustomFields/>
+  <Entities/>
+  <Cameras/>
+  <ClippingPlanes/>
+  <Views>
+   <GraphicView1>
+    <CameraSettings>
+     <LinkToCamera>GraphicView1</LinkToCamera>
+     <Location>
+      <From>( -13751 , 0 , 0 )</From>
+      <To>( 0 , 0 , 0 )</To>
+      <Up>( 0 , 1 , 0 )</Up>
+     </Location>
+     <ManualClippingPlanes type="Off"/>
+     <Perspective type="Off"/>
+    </CameraSettings>
+   </GraphicView1>
+  </Views>
+ </Post-Processing>
+ <Animation>
+  <AnimationOptions animationMode="0"/>
+  <AnimationProperties firstFrame="0" timeLaw="0.006000 + t_animation" lastFrame="0" framesFrequency="50" duration="0.03"/>
+  <AnimatedItems>
+   <GeneralItems/>
+   <GeometryItems/>
+   <CuttingPlanesItems/>
+   <IsosurfacesItems/>
+   <StreamTracersItems/>
+  </AnimatedItems>
+  <ImageProperties holdAspectRatio="1" height="32" width="268435460" input="-1"/>
+  <Save frameRate="25" outputPNG="0" imageBaseName="" outputFormat="0" folder="" quality="2"/>
+ </Animation>
+ <AnalysisSettings>
+  <StaticPressure isAutomatic="1" minValue="-1" maxValue="1"/>
+  <Velocity isAutomatic="1" minValue="0" maxValue="1"/>
+  <Vorticity isAutomatic="1" minValue="0" maxValue="1"/>
+  <Vx isAutomatic="1" minValue="-1" maxValue="1"/>
+  <Vy isAutomatic="1" minValue="-1" maxValue="1"/>
+  <Vz isAutomatic="1" minValue="-1" maxValue="1"/>
+  <TotalPressure isAutomatic="1" minValue="-1" maxValue="1"/>
+  <TurbulenceIntensity isAutomatic="1" minValue="0" maxValue="1"/>
+  <Temperature isAutomatic="1" minValue="277" maxValue="330"/>
+  <Viscosity isAutomatic="1" minValue="0" maxValue="1"/>
+  <VOF isAutomatic="1" minValue="0" maxValue="1"/>
+  <SurfaceInfo isAutomatic="1" minValue="0" maxValue="1"/>
+  <CustomFields/>
+  <PassiveScalars/>
+ </AnalysisSettings>
+ <UserDefinedVariables/>
+ <FMU_IO/>
+ <ViewAngles>
+  <GraphicView1 OrthoViewAxisMinusY="0" OrthoViewAxisX="0" OrthoViewAxisY="0" OrthoViewAxisZ="0" OrthoViewAxisMinusZ="0" OrthoViewAxisMinusX="0"/>
+ </ViewAngles>
+</XFlow>
